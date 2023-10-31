@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>I'm PremDas</h1>
+    <img src="img.jpg" width="250px" height="250px">
+    <header>
+        <nav>
+             <button><a href="#about">About</a></button>
+             <button> <a href="#skills">Skills</a></button>
+                <button><a href="#contact">Contact</a></button>
+             </nav>
+    </header>
+
+    <section id="home">
+        <h1>Welcome to my portfolio!</h1>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hello, I am Premdas, a final year BSc Computer Science student with a passion for technology and problem-solving.<br>I am an final year student interested to work in software field.<br> Throughout my academic journey, I have honed my skills in programming, data analysis, and software development.<br> I am enthusiastic about exploring the ever-evolving world of computer science and eager to contribute my knowledge to innovative projects.<br> I believe in the power of technology to drive positive change, and I am excited to embark on a career in this dynamic field. </p>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <ol>
+            <li>Python</li>
+            <li>Web Development</li>
+            <li>MsExcel</li>
+            <li>powerpoint</li>
+        </ol>
+    </section>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Email: pd2003@gmail.com</p>
+        <p>Ph.no: 8290180037</p>
+    </section>    
+     <script>
+      const nav = document.querySelector('nav');
+      const navLinks = nav.querySelectorAll('a');
+      const sections = document.querySelectorAll('section');
+
+      function changeLinkState() {
+          let index = sections.length;
+
+          while(--index && window.scrollY + 50 <= sections[index].offsetTop) {}
+
+          navLinks.forEach((link) => link.classList.remove('active'));
+          navLinks[index].classList.add('active');
+      }
+
+      changeLinkState();
+      window.addEventListener('scroll', changeLinkState);
+     </script>
+</body>
+</html>
